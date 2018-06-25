@@ -7,12 +7,54 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>后台</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
+  <div class="lt_aside">
+    <div class="brand">
+      <a href="#">前端21期</a>
+    </div>
+    <div class="user">
+      <img src="./images/default.png" alt="">
+      <p>超级管理员</p>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a class="current" href="#"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+        <li>
+          <a href="#"><i class="glyphicon glyphicon-list"></i><span>分类管理</span>
+          </a>
+          <ul class="child" style="display:block">
+            <li><a href="#">一级分类</a></li>
+            <li><a href="#">二级分类</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="lt_main">
+    <div class="lt_topbar">
+      <a class="icon_menu pull-left" href="#"><i class="glyphicon glyphicon-align-justify"></i></a>
+      <a class="icon_logout pull-right" href="#"><i class="glyphicon glyphicon-log-out"></i></a>
+
+    </div>
+    <div class="container-fluid">
+      <ol class="breadcrumb">
+        <li><a href="#">管理系统</a></li>
+        <li class="active">首页</li>
+      </ol>
+    </div>
+  </div>
+
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <script src="lib/nprogress/nprogress.js"></script>
+  <script src="js/common.js"></script>
 </body>
 
 </html>
