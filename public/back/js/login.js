@@ -68,7 +68,7 @@ $(function(){
           // alert("登录成功")
           location.href = "index.html";
         }
-        console.log($("#form").data("bootstrapValidator"))
+        // console.log($("#form").data("bootstrapValidator"))
         if ( info.error === 1000 ) {
           // alert("用户名错误")
           $("#form").data("bootstrapValidator").updateStatus("username","INVALID","callback");

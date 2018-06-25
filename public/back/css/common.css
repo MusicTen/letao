@@ -34,6 +34,10 @@ ul {
   top: 0;
   left: 0;
   z-index: 99;
+  transition: all 1s;
+}
+.lt_aside.hidemain {
+  left: -180px;
 }
 .lt_aside .brand {
   height: 50px;
@@ -89,6 +93,10 @@ ul {
   padding-left: 180px;
   height: 1000px;
   background-color: palegreen;
+  transition: all 1s;
+}
+.lt_main.hidemain {
+  padding-left: 0px;
 }
 .lt_main .lt_topbar {
   width: 100%;
@@ -98,6 +106,10 @@ ul {
   top: 0;
   left: 0;
   background-color: #3C8DBC;
+  transition: all 1s;
+}
+.lt_main .lt_topbar.hidemain {
+  padding-left: 0px;
 }
 .lt_main .lt_topbar a {
   width: 50px;
