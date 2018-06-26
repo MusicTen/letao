@@ -92,7 +92,7 @@ ul {
 .lt_main {
   padding-left: 180px;
   height: 1000px;
-  background-color: palegreen;
+  /* background-color: palegreen; */
   transition: all 1s;
 }
 .lt_main.hidemain {
@@ -126,7 +126,12 @@ ul {
   color: red;
 }
 
-
+.lt_content .echarts_1,
+.lt_content .echarts_2 {
+  width: 48%;
+  height: 400px;
+  /* background-color: #1D1F21; */
+}
 
 
 
