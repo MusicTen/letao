@@ -18,6 +18,9 @@ ul {
 .mt {
   margin-top: 150px;
 }
+.mb {
+  margin-bottom: 20px;
+}
 .login .panel-heading {
   height: 50px;
   line-height: 50px;

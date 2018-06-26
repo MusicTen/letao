@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=1.0, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>后台</title>
-  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
-  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
-  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+  <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="./css/common.css">
 </head>
 
 <body>
@@ -47,6 +47,21 @@
         <li class="active">分类管理</li>
         <li class="active">一级分类</li>
       </ol>
+      <button class="addBtn btn btn-default mb">添加分类</button>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th width:20%>序号</th>
+            <th width:80%>一级分类名</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 挖个坑 -->
+        </tbody>
+      </table>
+      <div class="text-right">
+        <ul id="paginator"></ul>
+      </div>
     </div>
   </div>
   <div class="modal fade" id="lgout" tabindex="-1">
@@ -66,11 +81,47 @@
       </div>
     </div>
   </div>
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-  <script src="lib/nprogress/nprogress.js"></script>
-  <script src="js/common.js"></script>
+  
+  <!-- 添加分类的模态框 -->
+  <div class="modal fade" id="addModal" tabindex="-1">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form id="form">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            <h4 class="modal-title">添加分类</h4>
+          </div>
+          <div class="modal-body">            
+            <div class="form-group">
+              <input type="text" class="form-control" name="categoryName" placeholder="请添加一级分类">
+            </div>       
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <!-- html5 新增 form 属性, 可以让表单外的按钮, 与表单关联起来(就相当于是写在了表单里面) form="form"-->
+            <button type="submit" class="btn btn-primary">确定</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/html" id="tmp">
+  {{ each rows v i}}
+    <tr>
+      <td>{{ i + 1 + (page-1)*size}}</td>
+      <td>{{ v.categoryName }}</td>
+    </tr>
+  {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/nprogress/nprogress.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/first.js"></script>
 </body>
 
 </html>
