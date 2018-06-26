@@ -133,6 +133,11 @@ ul {
   /* background-color: #1D1F21; */
 }
 
+.lt_main .table th,
+.lt_main .table td {
+  text-align: center;
+  vertical-align: middle;
+}
 
 
 
