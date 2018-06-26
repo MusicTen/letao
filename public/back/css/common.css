@@ -122,7 +122,9 @@ ul {
 .lt_main .container-fluid {
   padding-top: 70px;
 }
-
+#lgout p {
+  color: red;
+}
 
 
 

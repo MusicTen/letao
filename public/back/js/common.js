@@ -1,7 +1,7 @@
 // 5. 如果当前用户没有登录, 需要拦截到登陆页面
 //    前端是不知道用户是否登陆了的, 但是后台知道, 想知道, 问后台, (访问后台接口即可)
 //    注意: 需要将登录页, 排除在外面, 就是登录页可以不登录就访问的
-if ( location.href.indexOf("login.html") == -1) {
+if ( location.href.indexOf("login.html") === -1) {
   $.ajax({
     type: "get",
     url: "/employee/checkRootLogin",
@@ -60,13 +60,15 @@ $(function(){
     $('#lgout').modal("show");
   });
   //4.点击模态框中的退出按钮, 需要进行退出操作(ajax)
-  $(".btn-primary").click(function(){
+  $("#logoutBtn").click(function(){
     $.ajax({
       type:"get",
       url:"/employee/employeeLogout",
       dataType:"json",
       success: function(info) {
-        location.href = "login.html";
+        if( info.success ) {
+          location.href = "login.html";
+        }
       }
     })
   });
