@@ -110,6 +110,7 @@ ul {
   left: 0;
   background-color: #3C8DBC;
   transition: all 1s;
+  z-index: 66;
 }
 .lt_main .lt_topbar.hidemain {
   padding-left: 0px;
