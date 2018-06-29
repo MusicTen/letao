@@ -8,31 +8,7 @@
 .lt-nav li a {
   display: block;
 }
-.lt-product {
-  padding: 10px;
-  text-align: center;
-}
-.lt-product li {
-  width: 48%;
-  float: left;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #fff;
-  padding: 10px;
-}
-.lt-product li:nth-child(even) {
-  float: right;
-}
-.lt-product li a {
-  display: block;
-}
-.lt-product li .price {
-  color: red;
-}
-.lt-product li .oldprice {
-  text-decoration: line-through;
-}
+
 
 
 

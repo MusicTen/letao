@@ -83,6 +83,6 @@ $(function () {
 
 
     //进行页面跳转
-    location.href("searchList.html?key"+key);
+    location.href="searchList.html?key="+key;
   })
 })

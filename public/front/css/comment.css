@@ -14,6 +14,7 @@ img {
   width: 100%;
   display: block;
 }
+
 .lt_container {
   width: 100%;
   height: 100%;
@@ -61,13 +62,12 @@ img {
   color: indigo;
 }
 
-
-
 .lt_main {
   width: 100%;
   height: 100%;
   position: relative;
 }
+
 .lt_footer {
   width: 100%;
   height: 55px;
@@ -97,7 +97,51 @@ img {
   color: chocolate;
 }
 
+/* 搜索框公共部分 */
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+.lt_search .search_input {
+  height: 34px;
+  font-size: 14px;
+  border: 1px solid #007aff;
+  border-radius: 5px;
+}
+.lt_search .search_btn {
+  background-color: #007aff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 0 5px 5px 0;
+}
 
+/* 商品区公共部分 */
+.lt-product {
+  padding: 10px;
+  text-align: center;
+}
+.lt-product li {
+  width: 48%;
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+.lt-product li:nth-child(even) {
+  float: right;
+}
+.lt-product li a {
+  display: block;
+}
+.lt-product li .price {
+  color: red;
+}
+.lt-product li .oldprice {
+  text-decoration: line-through;
+}
 
 
 
