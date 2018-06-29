@@ -3,7 +3,6 @@ $(function () {
   var pageSize = 5;
   // 1. 一进入页面进行一次渲染
   render();
-
   function render() {
     $.ajax({
       type: "get",
@@ -197,6 +196,7 @@ $(function () {
       }
     }
   })
+  // 6. 注册表单校验成功事件, 阻止默认的提交, 通过 ajax 提交
   $("#form").on('success.form.bv', function (e) {
     e.preventDefault();
     //使用ajax提交逻辑
