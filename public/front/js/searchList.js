@@ -32,7 +32,7 @@ $(function () {
     params.pageSize = 100;
     // 还有两个可传的参数 price 和 num
     // 根据当前高亮的 a 来决定按什么排序,  1升序，2降序
-    var currentA =  $(".lt_sort .current")
+    var currentA = $(".lt_sort .current")
     if(currentA.length>0) {
       var sortName = currentA.data("type");
       var sortValue = currentA.find("i").hasClass("fa-angle-down")?2:1;
@@ -47,13 +47,12 @@ $(function () {
         data: params,
         dataType: "json",
         success: function (info) {
-          console.log(info);
+          // console.log(info);
           var htmlStr = template("tmp",info);
           $(".lt-product").html(htmlStr);
-
         }
       })
-    },1000)
+    },500)
   }
   // 2. 点击搜索按钮, 进行搜索功能, 历史记录管理
   $(".search_btn").click(function(){
@@ -62,7 +61,6 @@ $(function () {
       mui.toast('请输入搜索关键词');
       return;
     }
-  
     var history = localStorage.getItem('search_list');
     var arr = JSON.parse(history);
     
@@ -74,7 +72,7 @@ $(function () {
       arr.splice(index,1)
     }
     arr.unshift(key);
-    localStrage.setItem("search_list",JSON.stringify(arr))
+    localStorage.setItem("search_list",JSON.stringify(arr))
     render();
     $(".search_input").val("");
   });
@@ -90,5 +88,5 @@ $(function () {
       $(this).addClass("current").siblings().removeClass('current')
     }
     render();
-  })
+  });
 })

@@ -94,13 +94,14 @@
       </ul>
     </div>
   </div>
-  <script type="text/html" id="tmp">
+  <script type="text/template" id="tmp">
     <ul>
       {{ each data v i}}
         <li class="lt_product_item">
-          <a href="#">
+          <a href="#" data-id={{v.id}}>
             <!-- /mobile/images/detail.jpg -->
-            <img src="/mobile/images/detail.jpg" alt="">
+            <!-- v.pic[0].picAddr -->
+            <img src="{{v.pic[0].picAddr}}" alt="">
             <p class="mui-ellipsis-2">{{v.proName}}</p>
             <p>
               <span class="price">¥{{v.price}}</span>
@@ -116,7 +117,7 @@
   <script src="./lib/artTemplate/template-web.js"></script>
   <script src="./lib/mui/js/mui.js"></script>
   <script src="./js/comment.js"></script>
-  <script src="./js/searchList.js"></script>
+  <script src="./js/searchList-pullRefresh.js"></script>
 </body>
 
 </html>
